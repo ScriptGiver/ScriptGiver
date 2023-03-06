@@ -1,7 +1,7 @@
 local humanoid = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 
 humanoid.Died:Connect(function()
-    game:GetService("ReplicatedStorage").EntityInfo.Lobby:FireServer()
+game:GetService("ReplicatedStorage").EntityInfo.Lobby:FireServer()
 end)
 
-humanoid.Health = 0
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
